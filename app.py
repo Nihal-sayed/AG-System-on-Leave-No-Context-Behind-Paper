@@ -7,7 +7,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 
 # Load the embedding model
-embedding_model = GoogleGenerativeAIEmbeddings(google_api_key="AIzaSyDeFmoBbE6wNDKftGcF0mowbgzhC5HjzUw",model="models/embedding-001")
+embedding_model = GoogleGenerativeAIEmbeddings(google_api_key="Enter your Key",model="models/embedding-001")
 
 # Setting a Connection with the ChromaDB
 db_connection = Chroma(persist_directory="./chroma_db_", embedding_function=embedding_model)
@@ -28,7 +28,7 @@ chat_template = ChatPromptTemplate.from_messages([
 ])
 
 # Initialize chat model
-chat_model = ChatGoogleGenerativeAI(google_api_key="AIzaSyC2Bztff9XtDCDrCJfMJ8py9JaT8VkwSlY", 
+chat_model = ChatGoogleGenerativeAI(google_api_key="Enter Your Key", 
                                     model="gemini-1.5-pro-latest")
 
 # Initialize output parser
